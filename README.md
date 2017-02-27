@@ -1,2 +1,3 @@
-# 张杰的GitHub 博客
-张杰的github博客
+# 张杰的GitHub博客
+
+<a href="https://pages.github.com/">通过github构建博客</a>
