@@ -1,3 +1,4 @@
-# 张杰的GitHub博客
+# 北冥天河的博客
 
-<a href="https://pages.github.com/">通过github构建博客</a>
+
+<a href="http://iktz.cn/crf/crf">条件随机场的简介</a>
