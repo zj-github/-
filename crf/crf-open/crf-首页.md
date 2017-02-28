@@ -1,6 +1,7 @@
 
 
-#文档首页 
+# crf 文档首页 
+
 原文档：http://crf.sourceforge.net/introduction/
 
 - Overview
@@ -165,9 +166,22 @@ A template for implementing your own CRF application using this package can be f
 http://crf.sourceforge.net/introduction/CRFAppl.java
 
 
-##Various Interfaces   各种接口
+## Various Interfaces   各种接口
 
 
+As described in the previous section, a user of this distribution would require to implement various interfaces defined in the iitb.CRF package of the code. The most basic interfaces are the DataIter and DataSequence interfaces; these are mandatory for a user implement in order to use this package for an application. Optionally, a user may need to implement advanced interfaces like Feature and FeatureGenerator. Note that this section describes interfaces; for detailed API refer the javadoc for the package.
 
+>如前文所述，这种分布的用户需要实现各种接口的代码iitb.crf包定义。最基本的接口和数据序列的dataiter接口；这些为用户实现使用这个包的应用程序是强制性的。或者，用户可能需要实施先进的接口特征和featuregenerator。注意：本节描述接口；详细的API参考javadoc的包。
+### Public Interface DataSequence
+### Public Interface DataIter
+### Public Interface Feature
+### Public Interface FeatureGenerator
+FeatureGenerator interface is an aggregator over all the feature types. The feature generator interface is used by iitb.CRF package to access all the features to be used for learning and inference. Various methods in the interface are described below in brief.
 
+featuregenerator接口是全功能型聚合。特征发生器接口由iitb.crf包用于访问所有功能，可用于学习和推理。下面简要介绍了界面中的各种方法。
+
+- numFeatures()
+- startScanFeaturesAt(DataSequence data, int pos)
+- hasNext() This method is used to check if there are any more features for the current scan intitaited in startScanFeaturesAt().
+- next() Return the next feature for the current scan.
 
